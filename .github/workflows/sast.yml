@@ -36,5 +36,5 @@ jobs:
       - name: Check SAST result
         if: steps.sast.outputs.canProceed != 'true'
         run: |
-          echo "SAST scan failed. Please review the security issues."
+          echo "SAST scan found vulnerabilities. Please review the security issues."
           exit 1
